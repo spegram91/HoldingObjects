@@ -1,4 +1,6 @@
+import java.util.Map;
 import java.util.TreeMap;
+
 
 /**
  * Created by stephenpegram on 5/16/17.
@@ -46,6 +48,16 @@ public class PhoneBook {
             sb.append(name +", "+listing.get(name)+ "\n");
         }
         return sb.toString();
+    }
+
+    public String reverseLookUp(String number){
+        String result = "Number not found.";
+        for(Map.Entry<String, String> entry: listing.entrySet()){
+            if(number.equals(entry.getValue())){
+                result = entry.getKey();
+            }
+        }
+        return result;
     }
 
 

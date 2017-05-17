@@ -68,4 +68,17 @@ public class TestPhoneBook {
         //Then
         assertEquals("Should return true", expected, actual);
     }
+
+    @Test
+    public void testReverseLookUp(){
+    //Given
+        String expected = "Jane Doe";
+
+    //When
+        String actual = book.reverseLookUp("(098)-765-4321");
+
+    //Then
+        assertEquals(expected, actual);
+
+    }
 }

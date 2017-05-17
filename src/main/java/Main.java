@@ -17,7 +17,8 @@ public class Main {
         book.removeEntry("Anthony Jones");
         System.out.println(book.listAllEntries());
         System.out.println(book.listAllNames());
-        book.lookUp("Aurora Banuelos");
+        System.out.println(book.lookUp("Aurora Banuelos"));
+        System.out.println(book.reverseLookUp("(901)-234-5678"));
 
     }
 }
