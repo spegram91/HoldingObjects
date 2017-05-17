@@ -35,6 +35,9 @@ public class PhoneBook {
                         check = true;
                         break;
                     }
+                    else{
+                        throw new RecordNotPresentException();
+                    }
                 }
             }
         }
@@ -57,7 +60,7 @@ public class PhoneBook {
             }
         }
             return list.substring(1, list.length()-1);
-        } catch(NullPointerException e){
+        } catch(RecordNotPresentException e){
             System.out.println("There is no such name in this listing.");
             return null;
         }
