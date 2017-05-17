@@ -11,10 +11,11 @@ public class Main {
         book.addEntry("Anthony Jones", "5678901234");
         book.addEntry("Justin Haas", "7890123456");
         book.addEntry("Rahmir Ford","9012345678");
+        book.addEntry("Rahmir Ford", "4729475801");
 
         System.out.println(book.listAllEntries());
         System.out.println(book.listAllNames());
-        book.removeEntry("Anthony Jones");
+        book.removeEntry("Anthony Jones", "5678901234");
         System.out.println(book.listAllEntries());
         System.out.println(book.listAllNames());
         System.out.println(book.lookUp("Aurora Banuelos"));
