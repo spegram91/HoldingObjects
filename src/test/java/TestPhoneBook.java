@@ -62,7 +62,7 @@ public class TestPhoneBook {
     @Test
     public void testLookUp(){
         //Given
-        String expected = "[(098)-765-4321, (019)-283-7465]";
+        String expected = "(098)-765-4321, (019)-283-7465";
 
         //When
         String actual = book.lookUp("Jane Doe");

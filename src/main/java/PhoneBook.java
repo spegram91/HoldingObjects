@@ -49,8 +49,14 @@ public class PhoneBook {
     }
 
     public String lookUp(String name){
+        String list = "";
         try{
-            return listing.get(name).toString();
+        for(Map.Entry<String, ArrayList<String>> entry : listing.entrySet()){
+            if (name.equals(entry.getKey())){
+                list = entry.getValue().toString();
+            }
+        }
+            return list.substring(1, list.length()-1);
         } catch(NullPointerException e){
             System.out.println("There is no such name in this listing.");
             return null;
